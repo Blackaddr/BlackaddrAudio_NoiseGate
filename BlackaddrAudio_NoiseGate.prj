@@ -1,0 +1,243 @@
+{
+  "efxFileVersion": "1.4.0",
+  "company": "Blackaddr Audio",
+  "effectName": "Noise Gate",
+  "effectVersion": "0.1.0",
+  "coreVersion": "1.5.0",
+  "effectShortName": "NOISE",
+  "effectCategory": "Dynamics",
+  "effectDescription": "A noise gate wtih controllable threshold, opening and closing times and DC removal filter. Basic tuner included. ",
+  "numInputs": 1,
+  "numOutputs": 1,
+  "numControls": 10,
+  "effectFilename": "BlackaddrAudio_NoiseGate.efx",
+  "libraryName": "BlackaddrAudio_NoiseGate",
+  "cppClass": "BlackaddrAudio_NoiseGate::NoiseGate",
+  "cppInstBase": "_BlackaddrAudio_NoiseGate",
+  "constructorParams": "",
+  "isSingleton": false,
+  "controls": [
+    {
+      "name": "Bypass",
+      "shortName": "BYP",
+      "description": "Bypasses the effect when enabled",
+      "config": [
+        0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "iconOn": "gfx/StompUpLedOffCyan2.png",
+      "iconOnHeight": 232,
+      "iconOff": "gfx/StompDownLedOnCyan2.png",
+      "iconOffHeight": 232,
+      "position": [
+        630,
+        480
+      ],
+      "scalingRatio": 0.800000011920929,
+      "userData": 1
+    },
+    {
+      "name": "Volume",
+      "shortName": "VOL",
+      "description": "Sets the effect output volume from -40dB to +10dB",
+      "config": [
+        3,
+        0.0,
+        10.0,
+        8.0,
+        0.1000000014901161
+      ],
+      "iconPot": "gfx/Gold_Marshall_Knob_128x128.png",
+      "iconPotHeight": 128,
+      "userData": 0
+    },
+    {
+      "name": "Threshold",
+      "shortName": "THRESH",
+      "description": "Sets the threshold in dB. Below this level the sound will be completely muted.",
+      "config": [
+        3,
+        -60.0,
+        0.0,
+        -50.0,
+        1.0
+      ],
+      "iconPot": "gfx/Gold_Marshall_Knob_128x128.png",
+      "iconPotHeight": 128,
+      "position": [
+        150,
+        340
+      ],
+      "scalingRatio": 1.0,
+      "supressValueLabel": 1,
+      "userData": 0
+    },
+    {
+      "name": "Attack (ms)",
+      "shortName": "Attack",
+      "description": "Sets the opening time for the gate in milliseconds to fade in from mute.",
+      "config": [
+        3,
+        0.0,
+        50.0,
+        10.0,
+        1.0
+      ],
+      "iconPot": "gfx/Gold_Marshall_Knob_128x128.png",
+      "iconPotHeight": 128,
+      "position": [
+        340,
+        340
+      ],
+      "scalingRatio": 1.0,
+      "supressValueLabel": 1,
+      "userData": 0
+    },
+    {
+      "name": "Hold (ms)",
+      "shortName": "Hold",
+      "description": "Sets the time that the gate stays open in milliseconds after the signal has dropped below the threshold.",
+      "config": [
+        3,
+        0.0,
+        100.0,
+        50.0,
+        2.5
+      ],
+      "iconPot": "gfx/Gold_Marshall_Knob_128x128.png",
+      "iconPotHeight": 128,
+      "position": [
+        150,
+        500
+      ],
+      "scalingRatio": 1.0,
+      "supressValueLabel": 1,
+      "userData": 0
+    },
+    {
+      "name": "Release (ms)",
+      "shortName": "REL",
+      "description": "Setst he closing time of the gate in milliseconds to go from fully open to fully closed (muted). ",
+      "config": [
+        3,
+        0.0,
+        500.0,
+        100.0,
+        1.0
+      ],
+      "iconPot": "gfx/Gold_Marshall_Knob_128x128.png",
+      "iconPotHeight": 128,
+      "position": [
+        340,
+        500
+      ],
+      "scalingRatio": 1.0,
+      "supressValueLabel": 1,
+      "userData": 0
+    },
+    {
+      "name": "Gate",
+      "shortName": "Gate",
+      "description": "Indicates when the gate is active (muting).",
+      "config": [
+        6,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "iconOn": "gfx/RED_LED_on.png",
+      "iconOnHeight": 192,
+      "iconOff": "gfx/RED_LED_off.png",
+      "iconOffHeight": 192,
+      "position": [
+        340,
+        180
+      ],
+      "scalingRatio": 0.5,
+      "userData": 0
+    },
+    {
+      "name": "Input Level",
+      "shortName": "In-Lvl",
+      "description": "The input level is shown on a dB meter in the virtual effect window.",
+      "config": [
+        7,
+        -70.0,
+        3.0,
+        0.0,
+        1.0
+      ],
+      "iconPot": "gfx/InputLevel_74dB.png",
+      "iconPotHeight": 158,
+      "position": [
+        630,
+        270
+      ],
+      "scalingRatio": 1.049999952316284,
+      "userData": 0
+    },
+    {
+      "name": "DC Filter",
+      "shortName": "FILT",
+      "description": "Press and release quickly to reset the DC removal filter. Press and hold for several seconds to calibrate and remove the DC offset.",
+      "config": [
+        1,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "iconOn": "gfx/DC_Button_On.png",
+      "iconOnHeight": 128,
+      "iconOff": "gfx/DC_Button_Off.png",
+      "iconOffHeight": 0,
+      "position": [
+        150,
+        178
+      ],
+      "scalingRatio": 0.949999988079071,
+      "userData": 2
+    },
+    {
+      "name": "DC Filter Enable",
+      "shortName": "FILT-EN",
+      "description": "Enables the DC removal filter. By default, will auto calibrate at startup. Disable the filter if you don't want this or recalibrate with the DC FIlter butotn.",
+      "config": [
+        0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "iconOn": "gfx/SwitchToggleUp.png",
+      "iconOnHeight": 0,
+      "iconOff": "gfx/SwitchToggleDown.png",
+      "iconOffHeight": 0,
+      "userData": 0
+    }
+  ],
+  "projectFileVersion": "1.0.0",
+  "companyLogo": "gfx/BlackaddrLogo.png",
+  "pedalIcon": "gfx/NoiseGate_Icon.png",
+  "basePedal": "gfx/NoiseGate_Base.png",
+  "publicHeaderFiles": [
+    "inc/NoiseGate.h"
+  ],
+  "privateSourceFiles": [
+    "src/NoiseGateBase.cpp",
+    "src/NoiseGate.cpp"
+  ],
+  "modules": null,
+  "settings": {
+    "showModules": false,
+    "isSingleton": false,
+    "cppDefines": "",
+    "noWarnings": "",
+    "enableFastMath": false,
+    "enableO3": false
+  }
+}
