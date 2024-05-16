@@ -29,7 +29,7 @@ void NoiseGate::setParam(int paramIndex, float paramValue)
     case 1 : volume( (paramValue - 0.000000) / (10.000000 - 0.000000) ); break;
     case 2 : threshold( (paramValue - -60.000000) / (0.000000 - -60.000000) ); break;
     case 3 : attackms( (paramValue - 0.000000) / (50.000000 - 0.000000) ); break;
-    case 4 : holdms( (paramValue - 0.000000) / (100.000000 - 0.000000) ); break;
+    case 4 : holdms( (paramValue - 0.000000) / (500.000000 - 0.000000) ); break;
     case 5 : releasems( (paramValue - 0.000000) / (500.000000 - 0.000000) ); break;
     case 6 : gate( (paramValue - 0.000000) / (1.000000 - 0.000000) ); break;
     case 7 : inputlevel( (paramValue - -70.000000) / (3.000000 - -70.000000) ); break;
@@ -46,7 +46,7 @@ float NoiseGate::getUserParamValue(int paramIndex, float normalizedParamValue)
     case 1 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // volume
     case 2 : return ( ((0.000000 - -60.000000) * normalizedParamValue) + -60.000000 ); // threshold
     case 3 : return ( ((50.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // attackms
-    case 4 : return ( ((100.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // holdms
+    case 4 : return ( ((500.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // holdms
     case 5 : return ( ((500.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // releasems
     case 6 : return ( ((1.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // gate
     case 7 : return ( ((3.000000 - -70.000000) * normalizedParamValue) + -70.000000 ); // inputlevel

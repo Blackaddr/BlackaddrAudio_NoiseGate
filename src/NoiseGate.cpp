@@ -112,9 +112,14 @@ void NoiseGate::dcfilter(float value)
         if ((float)m_dcValueCount < (AUDIO_SAMPLE_RATE_HZ*0.5f)) {  // if it's held for les than 500 ms, do not use the results
             m_dcValueSum   = 0.0f;
             m_dcValueCount = 0;
-            m_dcValue      = 0.0f;
+            m_dcValue      = 0.0f; 
         } else {
-            m_dcValue = m_dcValueSum / static_cast<float>(m_dcValueCount);
+            if (m_dcValueCount > 0) {
+                m_dcValue = m_dcValueSum / static_cast<float>(m_dcValueCount);
+            } else {
+                m_dcValue = 0.0f;
+            }
+            
         }
     }
 }
