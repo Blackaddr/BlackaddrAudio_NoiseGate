@@ -103,6 +103,7 @@ private:
     void calcGain(float *input, float *gainBlock, unsigned numSamples);
     void calcSmoothedGain(float *gain_block, unsigned numSamples);
     void gateReset();
+    void sendReports(float gate, float inputLevel);
 
     unsigned m_skipUpdateCount = 0;
     bool m_signalDetect = false;
