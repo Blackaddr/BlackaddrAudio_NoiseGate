@@ -1,12 +1,12 @@
 {
-  "efxFileVersion": "1.4.0",
+  "efxFileVersion": "1.5.0",
   "company": "Blackaddr Audio",
   "effectName": "Noise Gate",
   "effectVersion": "1.0.0",
   "coreVersion": "1.5.0",
   "effectShortName": "NOISE",
   "effectCategory": "Dynamics",
-  "effectDescription": "A noise gate wtih controllable threshold, opening and closing times and DC removal filter. Basic tuner included. ",
+  "effectDescription": "A noise gate with controllable threshold, opening/closing times and DC removal filter.",
   "numInputs": 1,
   "numOutputs": 1,
   "numControls": 10,
@@ -16,6 +16,8 @@
   "cppInstBase": "_BlackaddrAudio_NoiseGate",
   "constructorParams": "",
   "isSingleton": false,
+  "processMidi": false,
+  "audioStreamType": 0,
   "controls": [
     {
       "name": "Bypass",
@@ -240,9 +242,11 @@
   "settings": {
     "showModules": false,
     "isSingleton": false,
+    "processMidi": false,
     "cppDefines": "",
     "noWarnings": "",
     "enableFastMath": false,
-    "enableO3": false
+    "enableO3": false,
+    "audioStreamType": 0
   }
 }
